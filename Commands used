@@ -1,0 +1,6 @@
+/*commands for TreeTraversal.java*/
+(compiling):
+"java -jar "C:\Program Files\checker-framework-2.3.2\checker-framework-2.3.2\checker\dist\checker.jar" -processor nullness TreeTraversal.java"
+if there is no compilation error
+(executing):
+"java TreeTraversal"
