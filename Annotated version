@@ -47,7 +47,7 @@ public class TreeTraversal {
 * printLevelOrder: Prints by level (starting at root), from left to right.
 */
 class Node {
-    @MonotonicNonNull Node left, right;
+    @NonNull Node left, right;
     int data;
     /* got an error(error: [initialization.fields.uninitialized] the constructor does not initialize fields: left, right).
      --resolved by adding the annotation @MonotonicNonNull,  reasons to add @MonotonicNonNull:
