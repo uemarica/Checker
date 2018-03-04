@@ -47,10 +47,13 @@ public class TreeTraversal {
 * printLevelOrder: Prints by level (starting at root), from left to right.
 */
 class Node {
-    @NonNull Node left, right;
+    @MonotonicNonNull Node left, right;
     int data;
     /* got an error(error: [initialization.fields.uninitialized] the constructor does not initialize fields: left, right).
-     --resolved by adding the annotation @NonNull
+     --resolved by adding the annotation @MonotonicNonNull,didn't use the other annotations because:
+     1.@MonotonicNonNull is appropriate as the fields(left and right) starts out as null and are alter set to non-null values.
+     2.@EnsuresNonNull can't be used as there is no specific method to set the fields,as it's working as a container to hold data.
+     3.@RequiresNonNull can't be used as we don't have any specific method that requires the fields to be null.
       
      */
     
