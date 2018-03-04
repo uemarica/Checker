@@ -50,11 +50,8 @@ class Node {
     @NonNull Node left, right;
     int data;
     /* got an error(error: [initialization.fields.uninitialized] the constructor does not initialize fields: left, right).
-     --resolved by adding the annotation @MonotonicNonNull,  reasons to add @MonotonicNonNull:
-      1. Both the fields starts out as null but is later set to non-null values.
-      2.Can't use the annotation @nullable because the fields most probably are set non-null values later.
-      3.Can't use the annotation @EnsuresNonNull because the fields are not initialized in any method as they are used as containers(Data Structures) and are used directly even if have a value equal to null.
-      4.Didn't use the annotation @RequiresNonNull because there are no methods in the program that requires the fields to be non-null specifically.
+     --resolved by adding the annotation @NonNull
+      
      */
     
     public Node(int data) {
