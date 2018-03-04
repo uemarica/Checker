@@ -55,7 +55,7 @@ class Node {
      2.@EnsuresNonNull can't be used as there is no specific method to set the fields,as it's working as a container to hold data.
      3.@RequiresNonNull can't be used as we don't have any specific method that requires the fields to be null.
       How i made upto the solution:
-      1.First i randomly compiled the code and i got the error saying: ""
+      1.First i randomly compiled the code and i got the error saying: "error: [initialization.fields.uninitialized] the constructor does not initialize fields: left, right"
       by the time i have already tried out the nullness checker on my other codes but was not sure about the initialization checker.
       2. Then i started with the initialization checker section and i got everything i want from the initializing-warning sections where it was clearly written not to initialize the fields if they are not meant as it makes the code weak.
       3.As the annotation @MonotonicNonNull perfectly matched my requirement(starting out as null and then taking a non-null value and continuing further) hence, i modified the code with the annotation @MonotonicNonNull
